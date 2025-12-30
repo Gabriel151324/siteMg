@@ -7,7 +7,7 @@ const links = document.querySelectorAll('.links a');
 function openMenu() {
     menu.classList.add('active');
     overlay.classList.add('active');
-    menuToggle.classList.add('hidden');
+    menuToggle.classList.add('hidde');
 }
 
 function closeMenu() {
