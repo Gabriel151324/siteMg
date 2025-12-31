@@ -1,0 +1,149 @@
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --verde-principal: #2E8B1F;
+    --verde-claro: #CFE8D8;
+    --cinza-escuro: #263238;
+    --cinza-texto: #555;
+    --branco: #FFFFFF;
+    --fundo: #F5F7F8;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--fundo);
+    color: var(--cinza-texto);
+}
+header {
+    padding: 20px 40px;
+}
+
+.return a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.return a i {
+    margin-right: 6px;
+}
+
+main {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 22px;
+    margin: 40px;
+    margin-top: 8px;
+}
+
+.course-header {
+    border-radius: 22px;
+    padding: 40px 50px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 25px;
+}
+
+.course-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #2e8b1f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4em;
+}
+
+.course-text h1 {
+    color: #2e8b1f;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.course-text p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 750px;
+}
+
+.info-box {
+    grid-column: span 2;
+}
+
+.info-box {
+    display: inline-block;
+    width: 48%;
+    margin-top: 20px;
+}
+
+.info-card {
+    background-color: #f9faf9;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #e6f1e6;
+}
+
+.info-card h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: #222;
+}
+
+.info-card p {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.course-header .info-box:nth-of-type(1),
+.course-header .info-box:nth-of-type(2) {
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .course-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .course-icon {
+        margin: 0 auto;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+}
+
+.rdc-disciplina,
+.rdc-area,
+.events-notices {
+    margin-top: 50px;
+}
+
+.rdc-disciplina h2,
+.rdc-area h2,
+.events-notices h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.box-disciplinas,
+.box-area-atuacao {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.disciplina, .area-atuacao {
+    background-color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 10px;
+    border: 1px solid #cfe8d5;
+}
