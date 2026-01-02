@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
 }
+
 :root {
     --verde-principal: #2E8B1F;
     --verde-claro: #CFE8D8;
@@ -12,11 +13,13 @@
     --branco: #FFFFFF;
     --fundo: #F5F7F8;
 }
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--fundo);
     color: var(--cinza-texto);
 }
+
 header {
     padding: 20px 40px;
 }
@@ -146,4 +149,72 @@ main {
     padding: 16px 20px;
     border-radius: 10px;
     border: 1px solid #cfe8d5;
+}
+
+/* ===== Events ===== */
+.cards {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+       gap: 30px;
+}
+
+.card {
+       background: #fff;
+       border-radius: 12px;
+       overflow: hidden;
+       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-content {
+       padding: 20px;
+}
+
+.card-content span {
+       font-size: 13px;
+       color: #777;
+}
+
+.card-content h3 {
+       margin: 10px 0;
+       font-size: 20px;
+       color: #222;
+}
+
+.card-content p {
+       font-size: 15px;
+       color: #555;
+}
+
+.btn-next {
+    background-color: #2e8b1f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 20px 40px;
+    float: right;
+    transition: background-color 0.3s;
+}
+
+.btn-next:hover {
+    background-color: #246917;
+}
+
+.btn-previus {
+    background-color: #2e8b1f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 20px 40px;
+    float: left;
+    transition: background-color 0.3s;
+}
+
+.btn-previus:hover {
+    background-color: #246917;
 }
