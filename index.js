@@ -24,17 +24,19 @@ links.forEach(link => {
     link.addEventListener('click', closeMenu);
 });
 
-// Page transition effect
 document.addEventListener("DOMContentLoaded", () => {
     const transition = document.getElementById("page-transition");
 
     document.querySelectorAll("a").forEach(link => {
         const href = link.getAttribute("href");
 
-        // ignora links internos (#) e vazios
         if (!href || href.startsWith("#")) return;
 
         link.addEventListener("click", e => {
+
+            // se não existir transição, deixa navegar normal
+            if (!transition) return;
+
             e.preventDefault();
             transition.classList.add("active");
 
