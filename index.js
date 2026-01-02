@@ -24,3 +24,23 @@ links.forEach(link => {
     link.addEventListener('click', closeMenu);
 });
 
+// Page transition effect
+document.addEventListener("DOMContentLoaded", () => {
+    const transition = document.getElementById("page-transition");
+
+    document.querySelectorAll("a").forEach(link => {
+        const href = link.getAttribute("href");
+
+        // ignora links internos (#) e vazios
+        if (!href || href.startsWith("#")) return;
+
+        link.addEventListener("click", e => {
+            e.preventDefault();
+            transition.classList.add("active");
+
+            setTimeout(() => {
+                window.location.href = href;
+            }, 450);
+        });
+    });
+});

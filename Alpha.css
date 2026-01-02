@@ -367,3 +367,26 @@ footer {
         gap: 24px;
     }
 }
+
+/* ======= Page Transition Styles ======= */
+#page-transition {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 9999;
+    pointer-events: none;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    opacity: 0;
+
+    transition: 
+        transform 0.45s ease-in-out,
+        opacity 0.35s ease-in-out;
+}
+
+#page-transition.active {
+    transform: scaleX(1);
+    opacity: 1;
+}
+/* ======= End of Styles ======= */
