@@ -231,13 +231,22 @@ header {
     color: var(--verde-principal);
     margin-bottom: 12px;
 }
+
 .course-card a {
     text-decoration: inherit;
     color: var(--verde-secundario);
 }
+
+.course-card p {
+    color: var(--cinza-texto);
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
 .course-card a:hover {
     color: var(--verde-principal)
 }
+
 .course-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.15);
