@@ -13,7 +13,10 @@
     --branco: #FFFFFF;
     --fundo: #F5F7F8;
 }
-
+body, html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--fundo);
@@ -217,4 +220,64 @@ main {
 
 .btn-previus:hover {
     background-color: #246917;
+}
+@media (max-width: 768px) {
+
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    main {
+        margin: 16px;
+        padding: 20px;
+    }
+
+    /* 🔥 TROCA GRID POR FLEX */
+    .course-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 16px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .course-icon {
+        margin-bottom: 16px;
+    }
+
+    .course-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .course-text h1 {
+        font-size: 1.8rem;
+        line-height: 1.25;
+        max-width: 100%;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .course-text p {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .info-box {
+        width: 100%;
+    }
+
+    .box-disciplinas,
+    .box-area-atuacao {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-next,
+    .btn-previus {
+        width: 100%;
+        margin: 12px 0;
+        float: none;
+    }
 }
