@@ -402,6 +402,8 @@ h1 {
        font-size: 15px;
        color: #555;
 }
+
+/* ======= Responsive Styles ======= */
 @media (max-width: 768px) {
     .nav-bar {
         flex-direction: column;
@@ -456,8 +458,13 @@ h1 {
     .close-menu {
         display: block;
     }
+
+    .contato-container {
+        flex-direction: column;
+    }
 }
 
+/* ======= Page Transition Styles ======= */
 #page-transition {
     position: fixed;
     inset: 0;

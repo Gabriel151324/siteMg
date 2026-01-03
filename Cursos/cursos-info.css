@@ -276,8 +276,7 @@ main {
 
     .btn-next,
     .btn-previus {
-        width: 100%;
-        margin: 12px 0;
-        float: none;
+        margin: 12px 10px;
+        float: center;
     }
 }
