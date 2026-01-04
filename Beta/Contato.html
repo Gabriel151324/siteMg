@@ -55,10 +55,10 @@
                             <p><strong>Horário:</strong><br>Seg a Sex: 7h às 17h</p>
                      </div>
 
-                     <form class="form" id="contatoForm">
+                     <form class="form" id="contatoForm" onsubmit="enviarWhats(event)">
                             <input type="text" id="nome" placeholder="Nome Completo">
                             <input type="email" id="email" placeholder="E-mail">
-                            <textarea id="mensagem" placeholder="Mensagem"></textarea>
+                            <textarea id="mensagem" placeholder="Digite sua mensagem" rows="6"></textarea>
                             <button type="submit">Enviar Mensagem</button>
                      </form>
 
