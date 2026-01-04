@@ -13,6 +13,7 @@
     --verde-claro: #B3CBB4;
     --branco: #FFFFFF;
     --cinza-texto: #445046;
+    --preto: #000000;
 }
 
 html {
@@ -133,8 +134,8 @@ header {
 /* ======= Hero Section ======= */
 
 .hero {
-    background-color: var(--azul-profundo);
-    color: var(--branco);
+    background-color: var(--branco);
+    color: var(--verde-principal);
     min-height: 90.7vh;
     position: relative;
 }
@@ -154,7 +155,7 @@ header {
 
 .hero-content p {
     font-size: 1.5rem;
-    color: var(--verde-claro);
+    color: var(--verde-secundario);
     margin: 30px 0;
 }
 
@@ -312,7 +313,7 @@ footer {
         height: 100vh;
         width: 80vw;
         max-width: 360px;
-        background-color: var(--azul-profundo);
+        background-color: var(--verde-principal);
         flex-direction: column;
         padding-top: 80px;
         transform: translateX(100%);
@@ -332,7 +333,7 @@ footer {
         padding: 18px 10%;
         display: block;
         font-size: 1.3rem;
-        color: var(--verde-claro);
+        color: var(--azul-profundo);
     }
 
     .close-menu {
