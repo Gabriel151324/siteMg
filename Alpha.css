@@ -293,11 +293,29 @@ footer {
     .nav-bar {
         padding: 15px 10px;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+    }
+
+    header {
+        position: fixed;
+    }
+
+    .hero {
+        margin-top: 150px;
+    }
+
+    .menu-left {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 20px;
+        size: 10px;
+        margin-bottom: -10px;
     }
 
     .hero-content h2 {
-        font-size: 2.2rem;
+        font-size: 1rem;
     }
 
     .hero-content p {
@@ -306,10 +324,7 @@ footer {
 
     .menu-toggle {
         display: flex;
-    }
-
-    .menu-toggle {
-        display: flex;
+        size: 1px;
     }
 
     .links {
@@ -355,7 +370,7 @@ footer {
     }
 
     #sobre {
-        scroll-margin-top: 136px;
+        scroll-margin-top: 120px;
     }
 }
 
