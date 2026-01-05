@@ -316,6 +316,10 @@ footer {
         position: fixed;
     }
 
+    .title {
+        font-size: 1.1rem;
+    }
+
     .hero {
         margin-top: 150px;
     }
@@ -340,7 +344,14 @@ footer {
 
     .menu-toggle {
         display: flex;
-        size: 1px;
+        border: 2px solid var(--branco);
+        padding: 6px;
+        border-radius: 8px;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        height: 2.5px;
     }
 
     .links {
