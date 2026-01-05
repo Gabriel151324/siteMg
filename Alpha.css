@@ -12,13 +12,15 @@
     --verde-secundario: #3FAE2A;
     --verde-claro: #B3CBB4;
     --branco: #FFFFFF;
-    --cinza-texto: #445046;
-    --preto: #000000;
+    --cinza-texto: #607363;
+    --preto: #0e0e0e;
+    --card: #252424;
 }
 
 html {
     scroll-behavior: smooth;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--preto);
 }
 
 .container {
@@ -30,8 +32,10 @@ html {
 /* ======= Header Styles ======= */
 
 header {
-    background-color: var(--verde-principal);
+    background-color: transparent;
     position: sticky;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(10px);
     top: 0;
     z-index: 1000;
 }
@@ -134,9 +138,9 @@ header {
 /* ======= Hero Section ======= */
 
 .hero {
-    background-color: var(--branco);
+    background-color: var(--preto);
     color: var(--verde-principal);
-    min-height: 90.7vh;
+    min-height: 70vh;
     position: relative;
 }
 
@@ -191,6 +195,7 @@ header {
 .about {
     padding: 80px 0;
     text-align: center;
+    background-color: var(--preto);
 }
 
 #sobre {
@@ -207,14 +212,14 @@ header {
 .about-text {
     max-width: 700px;
     margin: 0 auto;
-    color: var(--cinza-texto);
+    color: var(--branco);
     line-height: 1.8;
 }
 
 /* ======= Courses Section ======= */
 
 .our-courses {
-    background-color: #F5F5F5;
+    background-color: var(--preto);
     padding: 80px 0;
 }
 
@@ -226,7 +231,7 @@ header {
 }
 
 .course-card {
-    background-color: var(--branco);
+    background-color: var(--card);
     padding: 32px;
     gap: 16px;
     border-radius: 24px;
@@ -276,7 +281,7 @@ header {
 /* ======= Footer Styles ======= */
 
 footer {
-    background-color: var(--verde-principal);
+    background-color: transparent;
     padding: 20px;
     text-align: center;
     color: var(--branco);
@@ -286,6 +291,7 @@ footer {
 
 @media (max-width: 768px) {
     .nav-bar {
+        padding: 15px 10px;
         flex-direction: column;
         gap: 15px;
     }
@@ -313,7 +319,7 @@ footer {
         height: 100vh;
         width: 80vw;
         max-width: 360px;
-        background-color: var(--verde-principal);
+        background-color: var(--preto);
         flex-direction: column;
         padding-top: 80px;
         transform: translateX(100%);
@@ -326,14 +332,14 @@ footer {
     }
 
     .links li {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.547);
     }
 
     .links a {
         padding: 18px 10%;
         display: block;
         font-size: 1.3rem;
-        color: var(--azul-profundo);
+        color: var(--branco);
     }
 
     .close-menu {
@@ -359,7 +365,7 @@ footer {
     }
 
     .hero {
-        min-height: 80vh;
+        min-height: 54vh;
     }
 
     .hero-content {
@@ -381,6 +387,9 @@ footer {
         font-size: 0.95rem;
     }
 
+    .about-text {
+        padding: 0 20px;
+    }
 }
 
 @media (min-width: 1024px) {
