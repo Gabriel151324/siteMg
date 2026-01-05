@@ -446,7 +446,7 @@ footer {
 #page-transition {
     position: fixed;
     inset: 0;
-    background: #ffffff;
+    background: #000000;
     z-index: 9999;
     pointer-events: none;
     transform: scaleX(0);
