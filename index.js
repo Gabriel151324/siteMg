@@ -64,3 +64,43 @@ function enviarWhats(event) {
 
   window.open(url, "_blank");
 }
+
+// Observer para as seções "About"
+const sections = document.querySelectorAll(".about");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
+
+sections.forEach((section) => observer.observe(section));
+
+// Observer para a seção "Our Courses"
+const coursesSection = document.querySelector(".our-courses");
+
+const coursesObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      } else {
+        entry.target.classList.remove("active");
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
+
+coursesObserver.observe(coursesSection);  

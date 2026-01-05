@@ -140,7 +140,7 @@ header {
 .hero {
     background-color: var(--preto);
     color: var(--verde-principal);
-    min-height: 70vh;
+    min-height: 80vh;
     position: relative;
 }
 
@@ -196,6 +196,14 @@ header {
     padding: 80px 0;
     text-align: center;
     background-color: var(--preto);
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1.0s ease, transform 1.0s ease;
+}
+
+.about.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #sobre {
@@ -221,6 +229,14 @@ header {
 .our-courses {
     background-color: var(--preto);
     padding: 80px 0;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 2.0s ease, transform 2.0s ease;
+}
+
+.our-courses.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .items-courses {
