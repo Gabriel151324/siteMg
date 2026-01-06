@@ -510,10 +510,6 @@ h1 {
     .title {
         font-size: 1rem;
     }
-
-    .links {
-        left: 230px;
-    }
 }
 
 @media (max-width: 915px) {
@@ -529,7 +525,6 @@ h1 {
 @media (max-width: 1024px) {
     .links {
         width: 60vw;
-        right: -53px;
     }
 
     .form {
