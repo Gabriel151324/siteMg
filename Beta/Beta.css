@@ -416,9 +416,10 @@ h1 {
 }
 
 /* ======= Responsive Styles ======= */
-@media (max-width: 768px) {
+/* ==== ATÉ 480px — CELULARES PEQUENOS ==== */
+@media (min-width: 344px) and (max-width: 480px) {
     .nav-bar {
-        padding: 15px 10px;
+        padding: 12px 10px;
         flex-direction: column;
         gap: 10px;
     }
@@ -428,7 +429,7 @@ h1 {
     }
 
     .title {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .noticias,
@@ -439,20 +440,19 @@ h1 {
 
     .menu-left {
         display: flex;
-        position: relative;
         justify-content: space-between;
         align-items: center;
-        margin: 20px 20px;
-        size: 10px;
+        margin: 20px;
         margin-bottom: -10px;
+        gap: 20px;
     }
 
     .hero-content h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .hero-content p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .menu-toggle {
@@ -471,9 +471,9 @@ h1 {
         position: fixed;
         top: 0;
         right: 0;
-        height: 100vh;
-        width: 80vw;
+        width: 85vw;
         max-width: 360px;
+        height: 100vh;
         background-color: var(--preto);
         flex-direction: column;
         padding-top: 80px;
@@ -486,15 +486,11 @@ h1 {
         transform: translateX(0);
     }
 
-    .links li {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.547);
-    }
-
     .links a {
         padding: 18px 10%;
-        display: block;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         color: var(--branco);
+        display: block;
     }
 
     .close-menu {
@@ -503,47 +499,272 @@ h1 {
 
     .contato-container {
         flex-direction: column;
+        gap: 20px;
     }
 }
 
-@media (max-width: 740px) {
-    .title {
-        font-size: 1rem;
+/* ==== 481px até 768px — CELULARES GRANDES / TABLETS ==== */
+@media (min-width: 481px) and (max-width: 768px) {
+    .nav-bar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
     }
-}
 
-@media (max-width: 915px) {
     .title {
+        font-size: 1.3rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
         font-size: 1.2rem;
     }
 
     .links {
-        right: -1px;
+        width: 80vw;
     }
-}
 
-@media (max-width: 1024px) {
+    .menu-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        margin-bottom: -10px;
+        gap: 20px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        border: 2px solid var(--branco);
+        padding: 6px;
+        border-radius: 8px;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        height: 2.5px;
+    }
+
     .links {
-        width: 60vw;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 85vw;
+        max-width: 360px;
+        height: 100vh;
+        background-color: var(--preto);
+        flex-direction: column;
+        padding-top: 80px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
     }
 
-    .form {
-        padding: 20px;
-        width: 70%;
+    .links.active {
+        transform: translateX(0);
+    }
+
+    .links a {
+        padding: 18px 10%;
+        font-size: 1.2rem;
+        color: var(--branco);
+        display: block;
+    }
+
+    .close-menu {
+        display: block;
     }
 
     .contato-container {
-        gap: 10px;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        gap: 20px;
         margin-top: 70px;
     }
 
     .info {
         text-align: center;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
     }
 }
+
+/* ==== 769px até 1023px — TABLETS GRANDES / NOTEBOOKS ==== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-bar {
+        padding: 18px 40px;
+        flex-direction: row;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .links {
+        width: 60vw;
+        right: 0;
+    }
+
+     .menu-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        margin-bottom: -10px;
+        gap: 350px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        border: 2px solid var(--branco);
+        padding: 6px;
+        border-radius: 8px;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        height: 2.5px;
+    }
+
+    .links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 85vw;
+        max-width: 360px;
+        height: 100vh;
+        background-color: var(--preto);
+        flex-direction: column;
+        padding-top: 80px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .links.active {
+        transform: translateX(0);
+    }
+
+    .links a {
+        padding: 18px 10%;
+        font-size: 1.2rem;
+        color: var(--branco);
+        display: block;
+    }
+
+    .close-menu {
+        display: block;
+    }
+
+    .form {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .contato-container {
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* ==== 1024px+ — DESKTOP ==== */
+@media (min-width: 1025px) {
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .links {
+        position: static;
+        transform: translateX(0);
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        background: transparent;
+        padding: 0;
+    }
+
+    .links a {
+        font-size: 1rem;
+    }
+
+     .menu-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        margin-bottom: -10px;
+        gap: 350px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        border: 2px solid var(--branco);
+        padding: 6px;
+        border-radius: 8px;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        height: 2.5px;
+    }
+
+    .links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 85vw;
+        max-width: 360px;
+        height: 100vh;
+        background-color: var(--preto);
+        flex-direction: column;
+        padding-top: 80px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .links.active {
+        transform: translateX(0);
+    }
+
+    .links a {
+        padding: 18px 10%;
+        font-size: 1.2rem;
+        color: var(--branco);
+        display: block;
+    }
+
+    .close-menu {
+        display: block;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
+    .contato-container {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 0;
+    }
+
+    .form {
+        width: 50%;
+    }
+
+    .info {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
 
 /* ======= Page Transition Styles ======= */
 #page-transition {
