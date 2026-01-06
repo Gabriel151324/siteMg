@@ -7,18 +7,20 @@
 
 :root {
     --verde-principal: #2E8B1F;
-    --verde-claro: #CFE8D8;
+    --verde-claro: #acbab1;
     --cinza-escuro: #263238;
-    --cinza-texto: #555;
+    --cinza-texto: #222222;
     --branco: #FFFFFF;
-    --fundo: #F5F7F8;
+    --fundo: #0e0e0e;
 }
+
 body, html {
     max-width: 100%;
     overflow-x: hidden;
 }
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: var(--fundo);
     color: var(--cinza-texto);
 }
@@ -29,7 +31,7 @@ header {
 
 .return a {
     text-decoration: none;
-    color: #333;
+    color: var(--branco);
     font-size: 0.95rem;
 }
 
@@ -38,7 +40,7 @@ header {
 }
 
 main {
-    background-color: #ffffff;
+    background-color: var(--fundo);
     padding: 40px;
     border-radius: 22px;
     margin: 40px;
@@ -72,7 +74,7 @@ main {
 }
 
 .course-text p {
-    color: #555;
+    color: var(--branco);
     font-size: 1rem;
     line-height: 1.6;
     max-width: 750px;
@@ -89,7 +91,7 @@ main {
 }
 
 .info-card {
-    background-color: #f9faf9;
+    background-color: var(--cinza-texto);
     padding: 20px;
     border-radius: 14px;
     border: 1px solid #e6f1e6;
@@ -98,12 +100,12 @@ main {
 .info-card h3 {
     font-size: 1rem;
     margin-bottom: 6px;
-    color: #222;
+    color: var(--branco);
 }
 
 .info-card p {
     font-size: 0.95rem;
-    color: #555;
+    color: var(--verde-claro);
 }
 
 .course-header .info-box:nth-of-type(1),
@@ -137,7 +139,7 @@ main {
 .events-notices h2 {
     font-size: 1.6rem;
     margin-bottom: 20px;
-    color: #222;
+    color: var(--verde-principal);
 }
 
 .box-disciplinas,
@@ -148,10 +150,11 @@ main {
 }
 
 .disciplina, .area-atuacao {
-    background-color: #ffffff;
+    background-color: var(--cinza-texto);
     padding: 16px 20px;
     border-radius: 10px;
     border: 1px solid #cfe8d5;
+    color: var(--branco);
 }
 
 /* ===== Events ===== */
