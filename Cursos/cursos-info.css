@@ -165,7 +165,7 @@ main {
 }
 
 .card {
-       background: #fff;
+       background: var(--cinza-texto);
        border-radius: 12px;
        overflow: hidden;
        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -183,7 +183,7 @@ main {
 .card-content h3 {
        margin: 10px 0;
        font-size: 20px;
-       color: #222;
+       color: var(--branco);
 }
 
 .card-content p {
