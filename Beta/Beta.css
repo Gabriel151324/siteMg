@@ -373,7 +373,7 @@ h1 {
 }
 
 .card {
-    background: #fff;
+    background: var(--card);;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -407,12 +407,12 @@ h1 {
 .card-content h3 {
     margin: 10px 0;
     font-size: 20px;
-    color: #222;
+    color: var(--branco);
 }
 
 .card-content p {
     font-size: 15px;
-    color: #555;
+    color: var(--cinza-texto);
 }
 
 /* ======= Responsive Styles ======= */
