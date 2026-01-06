@@ -506,6 +506,54 @@ h1 {
     }
 }
 
+@media (max-width: 740px) {
+    .title {
+        font-size: 1rem;
+    }
+
+    .links {
+        left: 230px;
+    }
+}
+
+@media (max-width: 915px) {
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .links {
+        right: -1px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .links {
+        width: 60vw;
+        right: -53px;
+    }
+
+    .menu-left {
+        gap: 250px;
+    }
+
+    .form {
+        padding: 20px;
+        width: 70%;
+    }
+
+    .contato-container {
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 70px;
+    }
+
+    .info {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+
 /* ======= Page Transition Styles ======= */
 #page-transition {
     position: fixed;
