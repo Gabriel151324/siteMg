@@ -279,7 +279,15 @@ main {
 
     .btn-next,
     .btn-previus {
-        margin: 12px 10px;
+        margin: 10px 10px;
         float: center;
+        margin-bottom: 40px;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
     }
 }
