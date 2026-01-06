@@ -417,17 +417,6 @@ footer {
     }
 }
 
-@media (max-width: 1024px) {
-    .links {
-        width: 60vw;
-        right: -53px;
-    }
-
-    .menu-left {
-        gap: 250px;
-    }
-}
-
 @media (max-width: 480px) {
     .section-title {
         font-size: 2.2rem;
