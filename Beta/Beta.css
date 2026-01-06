@@ -227,6 +227,10 @@ header {
     background: #256428;
 }
 
+.numeroDeTelefone {
+    word-break: break-all;
+}
+
 /* ======= Galeria Section ======= */
 section {
     min-height: 80vh;
