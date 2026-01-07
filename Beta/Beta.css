@@ -558,13 +558,13 @@ h1 {
         background-color: var(--preto);
         flex-direction: column;
         padding-top: 80px;
-        transform: translateX(100%);
+        transform: translateY(-100%);
         transition: transform 0.3s ease;
         z-index: 1000;
     }
 
     .links.active {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     .links a {
@@ -642,13 +642,13 @@ h1 {
         background-color: var(--preto);
         flex-direction: column;
         padding-top: 80px;
-        transform: translateX(100%);
+        transform: translateY(-100%);
         transition: transform 0.3s ease;
         z-index: 1000;
     }
 
     .links.active {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     .links a {
@@ -700,7 +700,7 @@ h1 {
         align-items: center;
         margin: 20px;
         margin-bottom: -10px;
-        gap: 350px;
+        gap: 650px;
     }
 
     .menu-toggle {
@@ -725,13 +725,13 @@ h1 {
         background-color: var(--preto);
         flex-direction: column;
         padding-top: 80px;
-        transform: translateX(100%);
+        transform: translateY(-100%);
         transition: transform 0.3s ease;
         z-index: 1000;
     }
 
     .links.active {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     .links a {
@@ -743,10 +743,6 @@ h1 {
 
     .close-menu {
         display: block;
-    }
-
-    .close-menu {
-        display: none;
     }
 
     .contato-container {

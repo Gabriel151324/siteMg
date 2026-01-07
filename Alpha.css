@@ -369,18 +369,20 @@ footer {
         background-color: var(--preto);
         flex-direction: column;
         padding-top: 80px;
-        transform: translateX(100%);
+        transform: translateY(-100%);
         transition: transform 0.3s ease;
         z-index: 1000;
     }
 
     .links.active {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     .links a {
         padding: 18px 10%;
         font-size: 1.2rem;
+        color: var(--branco);
+        display: block;
     }
 
     .close-menu {
@@ -445,7 +447,7 @@ footer {
         align-items: center;
         margin: 20px;
         margin-bottom: -10px;
-        gap: 20px;
+        gap: 70px;
     }
 
     .menu-toggle {
@@ -470,13 +472,13 @@ footer {
         background-color: var(--preto);
         flex-direction: column;
         padding-top: 80px;
-        transform: translateX(100%);
+        transform: translateY(-100%);
         transition: transform 0.3s ease;
         z-index: 1000;
     }
 
     .links.active {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     .links a {
@@ -502,6 +504,7 @@ footer {
 
     .hero {
         margin-top: 120px;
+        min-height: 60vh;
     }
 
     .hero-content h2 {
@@ -543,13 +546,13 @@ footer {
         background-color: var(--preto);
         flex-direction: column;
         padding-top: 80px;
-        transform: translateX(100%);
+        transform: translateY(-100%);
         transition: transform 0.3s ease;
         z-index: 1000;
     }
 
     .links.active {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     .links a {
@@ -563,11 +566,16 @@ footer {
 }
 
 /* ======= 1024px+ — DESKTOP ======= */
-@media (min-width: 912px) and (max-width: 1023px) {
+@media (min-width: 912px) and (max-width: 1024px) {
     .items-courses {
         display: flex;
         justify-content: center;
         gap: 24px;
+    }
+
+    .hero {
+        margin-top: 50px;
+        min-height: 60vh;
     }
 
     .title {
@@ -580,7 +588,7 @@ footer {
         align-items: center;
         margin: 20px;
         margin-bottom: -10px;
-        gap: 350px;
+        gap: 450px;
     }
 
     .menu-toggle {
@@ -605,13 +613,13 @@ footer {
         background-color: var(--preto);
         flex-direction: column;
         padding-top: 80px;
-        transform: translateX(100%);
+        transform: translateY(-100%);
         transition: transform 0.3s ease;
         z-index: 1000;
     }
 
     .links.active {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     .links a {
@@ -624,17 +632,18 @@ footer {
     }
 }
 
-@media (min-width: 1024px) {
-    .menu-toggle {
-        display: none;
+@media (min-width: 1025px) {
+    .title {
+        font-size: 1.3rem;
     }
 
     .links {
         position: static;
-        height: auto;
-        flex-direction: row;
         transform: translateX(0);
-        background-color: transparent;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        background: transparent;
         padding: 0;
     }
 
@@ -642,13 +651,55 @@ footer {
         font-size: 1rem;
     }
 
-    .close-menu {
-        display: none;
+    .menu-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        margin-bottom: -10px;
+        gap: 650px;
     }
 
-    .menu-left {
-        gap: 0;
-        margin: 0;
+    .menu-toggle {
+        display: flex;
+        border: 2px solid var(--branco);
+        padding: 6px;
+        border-radius: 8px;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        height: 2.5px;
+    }
+
+    .links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 85vw;
+        max-width: 360px;
+        height: 100vh;
+        background-color: var(--preto);
+        flex-direction: column;
+        padding-top: 80px;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .links.active {
+        transform: translateY(0);
+    }
+
+    .links a {
+        padding: 18px 10%;
+        font-size: 1.2rem;
+        color: var(--branco);
+        display: block;
+    }
+
+    .close-menu {
+        display: block;
     }
 }
 
