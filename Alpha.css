@@ -484,6 +484,7 @@ footer {
     .links a {
         padding: 18px 10%;
         font-size: 1.2rem;
+        gap: 20px;
     }
 
     .close-menu {
