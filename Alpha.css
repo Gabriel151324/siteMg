@@ -559,6 +559,7 @@ footer {
     .links a {
         padding: 18px 10%;
         font-size: 1.2rem;
+        gap: 20px;
     }
 
     .close-menu {
@@ -626,6 +627,7 @@ footer {
     .links a {
         padding: 18px 10%;
         font-size: 1.2rem;
+        gap: 20px;
     }
 
     .close-menu {
@@ -656,6 +658,7 @@ footer {
 
     .links a {
         font-size: 1rem;
+        gap: 20px;
     }
 
     .menu-left {
@@ -710,7 +713,7 @@ footer {
     }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1281px) and (max-width: 1440px) {
     .items-courses {
         display: flex;
         justify-content: center;
@@ -780,10 +783,106 @@ footer {
         font-size: 1.2rem;
         color: var(--branco);
         display: block;
+        gap: 20px;
     }
 
     .close-menu {
         display: block;
+    }
+}
+
+@media (min-width: 1441px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .links {
+        position: static;
+        transform: translateX(0);
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        background: transparent;
+        padding: 0;
+    }
+
+    .links a {
+        font-size: 2rem;
+        gap: 20px;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .hero {
+        margin-top: 50px;
+        min-height: 77vh;
+        size: cover;
+    }
+
+    .hero-content h2 {
+        font-size: 5rem;
+    }
+
+    .hero-content p {
+        font-size: 3rem;
+    }
+
+    .hero-content .button-click {
+        font-size: 1.5rem;
+        padding: 20px 40px;
+        margin-top: 20px;
+    }
+
+    .about {
+        padding: 120px 0;
+    }
+
+    .section-title {
+        font-size: 5rem;
+    }
+
+    .about-text {
+        font-size: 2rem;
+        max-width: 900px;
+    }
+
+    .our-courses {
+        padding: 120px 0;
+    }
+
+    .items-courses {
+        display: flex;
+        gap: 32px;
+    }
+
+    .course-card {
+        padding: 40px;
+        gap: 24px;
+        border-radius: 32px;
+    }
+
+    .course-card h3 {
+        font-size: 2rem;
+    }
+
+    .course-card p {
+        font-size: 1.2rem;
+    }
+
+    .icon-course {
+        width: 90px;
+        height: 90px;
+        font-size: 36px;
+    }
+
+    footer {
+        font-size: 2rem;
     }
 }
 

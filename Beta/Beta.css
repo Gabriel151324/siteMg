@@ -761,7 +761,7 @@ h1 {
     }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1281px) and (max-width: 1440px) {
     .items-courses {
         display: flex;
         justify-content: center;
@@ -837,6 +837,31 @@ h1 {
         display: block;
     }
 }
+
+@media (min-width: 1441px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .links {
+        position: static;
+        transform: translateX(0);
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        background: transparent;
+        padding: 0;
+    }
+
+    .links a {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
+
 
 
 /* ======= Page Transition Styles ======= */
