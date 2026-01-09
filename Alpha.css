@@ -60,6 +60,11 @@ header {
     gap: 6px;
     cursor: pointer;
     z-index: 1200;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
 }
 
 .menu-toggle.hidden {
@@ -128,6 +133,11 @@ header {
 .links a {
     color: var(--branco);
     text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.links a:hover {
+    transform: translateX(-4px);
 }
 
 .links a:focus {
@@ -149,7 +159,7 @@ header {
 }
 
 .hero-content {
-    text-align: center;
+    text-align: start;
     padding-top: 150px;
 }
 
@@ -159,7 +169,7 @@ header {
 
 .hero-content p {
     font-size: 1.5rem;
-    color: var(--verde-secundario);
+    color: var(--branco);
     margin: 30px 0;
 }
 
@@ -174,8 +184,9 @@ header {
 }
 
 .button-click:hover {
-    background-color: #1f6e16;
+    background-color: #1aff00;
     transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(46, 139, 31, 0.3);
 }
 
 @keyframes bounce {
@@ -188,6 +199,15 @@ header {
     50% {
         transform: translate(-50%, -10px);
     }
+}
+
+.hero-image {
+    position: absolute;
+    bottom: 100px;
+    right: -120px;
+    width: 500px;
+    height: auto;
+    animation: bounce 3s infinite;
 }
 
 /* ======= About Section ======= */
@@ -223,6 +243,66 @@ header {
     color: var(--branco);
     line-height: 1.8;
 }
+
+/* ======= Carousel Section ======= */
+.carousel-section {
+    margin: 80px auto;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* Botões */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 14px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+.carousel-btn.next {
+    right: 15px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 95%;
+    }
+
+    .carousel-btn {
+        font-size: 1.6rem;
+    }
+}
+
 
 /* ======= Courses Section ======= */
 
@@ -273,7 +353,7 @@ header {
 }
 
 .course-card a:hover {
-    color: var(--verde-principal)
+    color: #1aff00;
 }
 
 .course-card:hover {
@@ -337,6 +417,10 @@ footer {
 
     .hero-content p {
         font-size: 1.1rem;
+    }
+
+    .hero-image {
+        display: none;
     }
 
     .menu-left {
@@ -416,7 +500,7 @@ footer {
 }
 
 /* ==== 400px até 768px — CELULARES GRANDES / TABLETS ==== */
-@media (min-width: 400px) and (max-width: 768px) {
+@media (min-width: 413px) and (max-width: 768px) {
     .nav-bar {
         padding: 15px 20px;
         flex-direction: column;
@@ -430,15 +514,21 @@ footer {
     }
 
     .hero {
-        margin-top: 140px;
+        margin-top: -70px;
+        margin-bottom: 70px;
     }
 
     .hero-content h2 {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
 
     .hero-content p {
         font-size: 1.2rem;
+    }
+
+    .hero-image {
+        width: 300px;
+        bottom: -80px;
     }
 
     .menu-left {
@@ -506,14 +596,19 @@ footer {
     .hero {
         margin-top: 120px;
         min-height: 60vh;
+        margin-left: 40px;
     }
 
     .hero-content h2 {
-        font-size: 2.4rem;
+        font-size: 3rem;
     }
 
     .hero-content p {
         font-size: 1.25rem;
+    }
+
+    .hero-image {
+        display: none;
     }
 
     .menu-left {
@@ -558,12 +653,21 @@ footer {
 
     .links a {
         padding: 18px 10%;
-        font-size: 1.2rem;
-        gap: 20px;
+        font-size: 2rem;
+        gap: 60px;
     }
 
     .close-menu {
         display: block;
+    }
+
+    .button-click {
+        padding: 14px 28px;
+        font-size: 1.4rem;
+    }
+
+    .carousel {
+        max-width: 80%;
     }
 }
 
@@ -578,10 +682,19 @@ footer {
     .hero {
         margin-top: 50px;
         min-height: 60vh;
+        margin-left: 40px;
+        margin-top: -40px;
+        margin-bottom: 100px;
     }
 
     .title {
         font-size: 1.3rem;
+    }
+
+    .hero-image {
+        margin-bottom: -200px;
+        width: 300px;
+        margin-right: 100px;
     }
 
     .menu-left {
@@ -633,6 +746,27 @@ footer {
     .close-menu {
         display: block;
     }
+
+    .our-courses {
+        padding: 100px 0;
+    }
+
+    .carousel {
+        max-width: 85%;
+    }
+
+    .items-courses {
+        margin-top: 60px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .course-card {
+        padding: 36px 36px 36px 36px;
+        gap: 20px;
+        border-radius: 28px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -646,6 +780,11 @@ footer {
         font-size: 1.3rem;
     }
 
+    .hero-image {
+        margin-top: 300px;
+        margin-bottom: -70px;
+    }
+
     .links {
         position: static;
         transform: translateX(0);
@@ -657,8 +796,14 @@ footer {
     }
 
     .links a {
-        font-size: 1rem;
-        gap: 20px;
+        padding: 18px 10%;
+        font-size: 1.2rem;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    .links a:hover {
+        transform: translateX(6px);
     }
 
     .menu-left {

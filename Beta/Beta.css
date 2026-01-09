@@ -761,7 +761,7 @@ h1 {
     }
 }
 
-@media (min-width: 1281px) and (max-width: 1440px) {
+@media (min-width: 1281px) and (max-width: 1920px) {
     .items-courses {
         display: flex;
         justify-content: center;
@@ -838,7 +838,7 @@ h1 {
     }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1921px) {
     .menu-toggle {
         display: none;
     }
