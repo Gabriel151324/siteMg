@@ -386,7 +386,7 @@ footer {
 /* ======= Responsive Styles ======= */
 
 /* ==== ATÉ 480px — CELULARES PEQUENOS ==== */
-@media (min-width: 344px) and (max-width: 480px) {
+@media (min-width: 314px) and (max-width: 376px) {
     .nav-bar {
         padding: 12px 10px;
         flex-direction: column;
@@ -499,8 +499,123 @@ footer {
     }
 }
 
+@media (min-width: 377px) and (max-width: 480px) {
+    .nav-bar {
+        padding: 12px 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header {
+        position: fixed;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        margin-top: 150px;
+        min-height: 54vh;
+    }
+
+    .hero-content {
+        padding-top: 100px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.9rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-image {
+        width: 200px;
+        margin-right: 20px;
+        margin-bottom: -80px;
+    }
+
+    .menu-left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        margin-bottom: -10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        border: 2px solid var(--branco);
+        padding: 6px;
+        border-radius: 8px;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        height: 2.5px;
+    }
+
+    .links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 85vw;
+        height: 100vh;
+        max-width: 360px;
+        background-color: var(--preto);
+        flex-direction: column;
+        padding-top: 80px;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .links.active {
+        transform: translateY(0);
+    }
+
+    .links a {
+        padding: 18px 10%;
+        font-size: 1.2rem;
+        color: var(--branco);
+        display: block;
+    }
+
+    .close-menu {
+        display: block;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .button-click {
+        padding: 12px 22px;
+        font-size: 0.95rem;
+    }
+
+    .about-text {
+        padding: 0 20px;
+    }
+
+    #inicio {
+        scroll-margin-top: 200px;
+    }
+
+    #sobre {
+        scroll-margin-top: 120px;
+    }
+
+    #cursos {
+        scroll-margin-top: 100px;
+    }
+}
+
 /* ==== 400px até 768px — CELULARES GRANDES / TABLETS ==== */
-@media (min-width: 413px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 768px) {
     .nav-bar {
         padding: 15px 20px;
         flex-direction: column;
