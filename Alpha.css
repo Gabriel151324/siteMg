@@ -629,8 +629,9 @@ footer {
     }
 
     .hero {
-        margin-top: -70px;
+        margin-top: 20px;
         margin-bottom: 70px;
+        margin-left: 20px;
     }
 
     .hero-content h2 {
@@ -642,8 +643,8 @@ footer {
     }
 
     .hero-image {
-        width: 300px;
-        bottom: -80px;
+        width: 400px;
+        margin-bottom: -80px;
     }
 
     .menu-left {
