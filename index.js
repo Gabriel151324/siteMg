@@ -132,3 +132,36 @@ setInterval(() => {
     index = (index + 1) % slides.length;
     updateCarousel();
 }, 4000);
+
+// PARTE DO CÓDIGO DO BACKEND
+
+// Função para carregar imagens dinamicamente
+function loadDynamicImages() {
+    // Verificar se há imagens salvas no localStorage
+    const savedImages = JSON.parse(localStorage.getItem('siteImages') || '[]');
+    
+    if (savedImages.length > 0) {
+        // Carregar imagens do carrossel (exemplo para index.html)
+        const carouselImages = savedImages.filter(img => img.location === 'index_carousel');
+        
+        if (carouselImages.length > 0 && document.querySelector('.carousel-inner')) {
+            // Adicionar imagens ao carrossel
+            // Você precisa adaptar esta lógica para sua estrutura específica
+        }
+        
+        // Carregar imagens da galeria
+        const galleryImages = savedImages.filter(img => img.location === 'galeria');
+        if (galleryImages.length > 0 && document.querySelector('.gallery-container')) {
+            // Adicionar imagens à galeria
+        }
+    }
+    
+    // Carregar notícias
+    const savedNews = localStorage.getItem('siteNews');
+    if (savedNews && document.querySelector('.news-content')) {
+        document.querySelector('.news-content').innerHTML = savedNews;
+    }
+}
+
+// Executar quando a página carregar
+document.addEventListener('DOMContentLoaded', loadDynamicImages);

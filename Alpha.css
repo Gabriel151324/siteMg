@@ -1166,3 +1166,31 @@ footer {
 }
 
 /* ======= End of Styles ======= */
+
+/* PARTE DO CSS DO PAINEL ADMINISTRATIVO BACKEND */
+:root {
+    --cor-primaria: #2c3e50;
+    --cor-secundaria: #ecf0f1;
+    --cor-destaque: #3498db;
+    --cor-texto: #333;
+    --cor-fundo: #f9f9f9;
+}
+
+/* Estilos para o painel administrativo */
+.admin-badge {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.admin-badge:hover {
+    background-color: var(--cor-destaque);
+}

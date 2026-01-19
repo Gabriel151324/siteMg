@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SITEMG</title>
+    <link rel="stylesheet" href="Alpha.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: var(--cor-secundaria);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .login-container h2 {
+            text-align: center;
+            color: var(--cor-primaria);
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--cor-texto);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--cor-primaria);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .login-btn:hover {
+            background-color: var(--cor-destaque);
+        }
+        
+        .error-message {
+            color: #ff4444;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Acesso Administrativo</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="cargo">Cargo:</label>
+                <select id="cargo" name="cargo" required>
+                    <option value="">Selecione um cargo</option>
+                    <option value="adm">Administrador</option>
+                    <option value="multimidia">Multimídia</option>
+                </select>
+            </div>
+            <button type="submit" class="login-btn">Entrar</button>
+        </form>
+        <div id="errorMessage" class="error-message"></div>
+        <div class="back-link">
+            <a href="index.html">← Voltar para o site</a>
+        </div>
+    </div>
+
+    <script>
+        // Credenciais (em produção, isso deve ser no backend)
+        const CREDENTIALS = {
+            'adm': { user: 'ADM', pass: 'coo123' },
+            'multimidia': { user: 'MULTIMIDIA', pass: 'multi987' }
+        };
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value.toUpperCase();
+            const password = document.getElementById('password').value;
+            const cargo = document.getElementById('cargo').value;
+            
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (!cargo) {
+                errorMessage.textContent = 'Por favor, selecione um cargo.';
+                errorMessage.style.display = 'block';
+                return;
+            }
+            
+            const cred = CREDENTIALS[cargo];
+            
+            if (username === cred.user && password === cred.pass) {
+                // Salva no localStorage
+                localStorage.setItem('userRole', cargo);
+                localStorage.setItem('userName', username);
+                localStorage.setItem('isLoggedIn', 'true');
+                
+                // Redireciona para a página administrativa
+                window.location.href = 'admin-panel.html';
+            } else {
+                errorMessage.textContent = 'Credenciais inválidas!';
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
