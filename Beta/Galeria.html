@@ -49,22 +49,85 @@
               <h1>Galeria</h1>
 
               <div class="grid">
-                     <div class="box green" href="#">Instalações</div>
-                     <div class="box blue" href="#">Laboratórios</div>
-                     <div class="box purple" href="#">Eventos</div>
-                     <div class="box orange" href="#">Biblioteca</div>
-                     <div class="box pink" href="#">Atividades</div>
-                     <div class="box teal" href="#">Formatura</div>
+                     <div class="box green" onclick="abrirGaleria('instalacoes')">Instalações</div>
+                     <div class="box blue" onclick="abrirGaleria('laboratorios')">Laboratórios</div>
+                     <div class="box purple" onclick="abrirGaleria('eventos')">Eventos</div>
+                     <div class="box orange" onclick="abrirGaleria('biblioteca')">Biblioteca</div>
+                     <div class="box pink" onclick="abrirGaleria('atividades')">Atividades</div>
+                     <div class="box teal" onclick="abrirGaleria('formatura')">Formatura</div>
               </div>
        </section>
 
-       <Section id="instalacoes"></Section>
-       <Section id="laboratorios"></Section>
-       <Section id="eventos"></Section>
-       <Section id="biblioteca"></Section>
-       <Section id="atividades"></Section>
-       <Section id="formatura"></Section>
+       <Section id="instalacoes" class="gallery-section">
+              <h2>Instalações</h2>
+              <div class="image-grid">
+                     <img src="../imgs/Local1.jpg" alt="Instalações 1">
+                     <img src="../imgs/Local2.jpg" alt="Instalações 2">
+                     <img src="../imgs/Local3.jpg" alt="Instalações 3">
+                     <img src="../imgs/Local4.jpg" alt="Instalações 4">
+              </div>
+              <button class="btn-voltar" onclick="voltarGaleria()"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+       </Section>
+       <Section id="laboratorios" class="gallery-section">
+              <h2>Laboratórios</h2>
+              <div class="image-grid">
+                     <img src="../imgs/LabQuim1.jpg" alt="Laboratório de Química 1">
+                     <img src="../imgs/LabQuim2.jpg" alt="Laboratório de Química 2">
+                     <img src="../imgs/Lei1.jpg" alt="LEI 1">
+                     <img src="../imgs/Lei2.jpg" alt="LEI 2">
+                     <img src="../imgs/Lei3.jpg" alt="LEI 3">
+              </div>
+              <button class="btn-voltar" onclick="voltarGaleria()"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+       </Section>
+       <Section id="eventos" class="gallery-section">
+              <h2>Eventos</h2>
+              <div class="image-grid">
+              </div>
+              <button class="btn-voltar" onclick="voltarGaleria()"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+       </Section>
+       <Section id="biblioteca" class="gallery-section">
+              <h2>Biblioteca</h2>
+              <div class="image-grid">
+                     <img src="../imgs/Biblioteca1.jpg" alt="Biblioteca 1">
+                     <img src="../imgs/Biblioteca2.jpg" alt="Biblioteca 2">
+                     <img src="../imgs/Biblioteca3.jpg" alt="Biblioteca 3">
+                     <img src="../imgs/Biblioteca4.jpg" alt="Biblioteca 4">
+                     <img src="../imgs/Biblioteca5.jpg" alt="Biblioteca 5">
+              </div>
+              <button class="btn-voltar" onclick="voltarGaleria()"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+       </Section>
+       <Section id="atividades" class="gallery-section">
+              <h2>Atividades</h2>
+              <div class="image-grid">
+              </div>
+              <button class="btn-voltar" onclick="voltarGaleria()"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+       </Section>
+       <Section id="formatura" class="gallery-section">
+              <h2>Formatura</h2>
+              <div class="image-grid">
+              </div>
+              <button class="btn-voltar" onclick="voltarGaleria()"><i class="fa-solid fa-arrow-left"></i> Voltar</button>
+       </Section>
 
+       <script>
+              function abrirGaleria(id) {
+                     document.getElementById('galeria').style.display = 'none';
+                     const secoes = document.querySelectorAll('.gallery-section');
+                     secoes.forEach(secao => secao.classList.remove('active'));
+                     const target = document.getElementById(id);
+                     if(target) {
+                            target.classList.add('active');
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                     }
+              }
+
+              function voltarGaleria() {
+                     const secoes = document.querySelectorAll('.gallery-section');
+                     secoes.forEach(secao => secao.classList.remove('active'));
+                     document.getElementById('galeria').style.display = 'block';
+                     window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+       </script>
        <script src="../index.js"></script>
        <div id="page-transition"></div>
 </body>
